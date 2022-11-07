@@ -2,7 +2,7 @@ import React from 'react';
 import { Wheel } from 'react-custom-roulette';
 //@ts-ignore
 import { Container, Title } from 'reactbulma';
-import { data } from './data';
+import { wheel } from './wheel';
 
 import Form from "./components/Form";
 import Footer from "./components/Footer"
@@ -13,7 +13,7 @@ function App() {
   const [prizeNumber, setPrizeNumber] = React.useState<number>(0);
 
   const handleSpinClick = () => {
-    const newPrizeNumber = Math.floor(Math.random() * data.length)
+    const newPrizeNumber = Math.floor(Math.random() * wheel.length)
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
   }
@@ -26,7 +26,7 @@ function App() {
         <Wheel
           mustStartSpinning={mustSpin}
           prizeNumber={prizeNumber}
-          data={data}
+          data={wheel}
           backgroundColors={['#3e3e3e', '#df3428']}
           textColors={['#ffffff']}
           radiusLineColor='#ffd700'
@@ -34,7 +34,8 @@ function App() {
           textDistance={90}
           perpendicularText={true}
           onStopSpinning={() => {
-            setMustSpin(false);
+            setMustSpin(false)
+            console.log(prizeNumber);
           }}
         />
         <Form

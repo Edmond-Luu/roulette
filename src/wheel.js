@@ -1,4 +1,4 @@
-export const data = [
+export const wheel = [
     { option: '0', style: { backgroundColor: 'green' } },
     { option: '2', style: { backgroundColor: 'black' } },
     { option: '14', style: { backgroundColor: 'red' } },
