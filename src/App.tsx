@@ -21,29 +21,35 @@ function App() {
 
   return (
     <div className="app">
+
       <Container>
-        <h1 className="title">React Roulette Game</h1>
-        <Wheel
-          mustStartSpinning={mustSpin}
-          prizeNumber={prizeNumber}
-          data={wheel}
-          backgroundColors={['#3e3e3e', '#df3428']}
-          textColors={['#ffffff']}
-          radiusLineColor='#ffd700'
-          outerBorderColor='#ffd700'
-          textDistance={90}
-          perpendicularText={true}
-          onStopSpinning={() => {
-            setMustSpin(false)
-            console.log(prizeNumber);
-          }}
-        />
-        <Form
-          spinClick={handleSpinClick}
-        />
+        <div className="wholeApp">
+          <div>
+            <h1 className="title">React Roulette Game</h1>
+            <Wheel
+              mustStartSpinning={mustSpin}
+              prizeNumber={prizeNumber}
+              data={wheel}
+              backgroundColors={['#3e3e3e', '#df3428']}
+              textColors={['#ffffff']}
+              radiusLineColor='#ffd700'
+              outerBorderColor='#ffd700'
+              textDistance={90}
+              perpendicularText={true}
+              onStopSpinning={() => {
+                setMustSpin(false)
+                console.log(wheel[prizeNumber]);
+              }}
+            />
+            <Form
+              spinClick={handleSpinClick}
+            />
+          </div>
+        </div>
       </Container>
+
       <Footer />
-    </div>
+    </div >
   );
 }
 

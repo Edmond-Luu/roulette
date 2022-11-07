@@ -1,7 +1,6 @@
 body {
   margin: 25px;
   box-sizing: border-box;
-  min-height: 100vh;
   background-color: rgb(8, 79, 8);
 }
 
@@ -10,12 +9,31 @@ body {
   font-size: 40px !important;
 }
 
-.app{
-  height: 100vh;
+.wholeApp{
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.formContainer{
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
 }
 
+.winningNumber{
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  align-self: center;
+}
+
+.spinButton{
+  margin-top: 10px;
+  width: 200px;
+}
 
 .formTitle{
   color:white;
