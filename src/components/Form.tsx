@@ -10,18 +10,29 @@ export default function Form(props: any) {
             <p className="formTitle">Place your bets:</p>
             <form>
                 <div>
-                    <label htmlFor='optionSelect' className="selectLabel">Color - Pays 2 to 1</label>
-                    <select id="optionSelect" className="optionSelect">
-                        <option value="nobet">No bet</option>
+                    <label htmlFor='colorBet' className="selectLabel">Bet amount</label>
+                    <input type="number" id="colorBet" name="colorBet" onChange={props.handleChange} value={props.betData.colorBet}/>
+                </div>
+                <div>
+                    <label htmlFor='selectColor' className="selectLabel">Color - Pays 2 to 1</label>
+                    <select id="selectColor" className="optionSelect" name="color" onChange={props.handleChange} value={props.betData.color}>
+                        <option value="">No bet</option>
                         <option value="black">⚫</option>
                         <option value="red">🔴</option>
                         <option value="green">🟢</option>
                     </select>
                 </div>
+
+                <br/>
+
                 <div>
-                    <label htmlFor='optionSelect' className="selectLabel">Odd or Even - Pays 2 to 1</label>
-                    <select id="optionSelect" className="optionSelect">
-                        <option value="nobet">No bet</option>
+                    <label htmlFor='oddEvenBet' className="selectLabel">Bet amount</label>
+                    <input type="number" id="oddEvenBet" name="oddEvenBet" onChange={props.handleChange} value={props.betData.oddEvenBet}/>
+                </div>
+                <div>
+                    <label htmlFor='selectOddEven' className="selectLabel">Odd or Even - Pays 2 to 1</label>
+                    <select id="selectOddEven" className="optionSelect" name="oddEven" onChange={props.handleChange} value={props.betData.oddEven}>
+                        <option value="">No bet</option>
                         <option value="even">Even</option>
                         <option value="odd">Odd</option>
                     </select>

@@ -2,32 +2,36 @@ body {
   margin: 25px;
   box-sizing: border-box;
   background-color: rgb(8, 79, 8);
+  min-height: 100vh;
 }
 
-.title { 
+.title {
   color: white !important;
   font-size: 40px !important;
   text-align: center;
 }
 
-.wholeApp{
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
+.app {
+  height: 100vh;
 }
 
-.leftGrid{
+.wholeApp {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftGrid {
   display: flex;
   flex-direction: column;
 }
 
-.formContainer{
+.formContainer {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
 }
 
-.winningNumber{
+.winningNumber {
   width: 75px;
   height: 75px;
   border-radius: 10px;
@@ -40,28 +44,36 @@ body {
   color: white;
 }
 
-.spinButton{
+.spinButton {
   margin-top: 10px;
   width: 200px;
   align-self: center;
 }
 
-.formTitle{
-  color:white;
+.formTitle {
+  color: white;
   padding-top: 25px;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.selectLabel{
+.selectLabel {
   color: white;
   margin-right: 15px;
+}
+
+
+.rightGrid {
+  width: 100px;
+  height: 50px;
+  background-color: white;
 }
 
 .footer {
   margin-top: auto;
   display: flex;
-  min-height: 100px;
+  position: absolute;
+  bottom: 0;
   background-color: rgb(32, 32, 99) !important;
   width: 100%;
   color: white;
