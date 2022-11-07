@@ -6,9 +6,6 @@ import { Button } from "reactbulma"
 export default function Form(props: any) {
     return (
         <div className="formContainer">
-            <div className="winningNumber">
-                <p>Hello</p>
-            </div>
             <Button danger onClick={props.spinClick} className="spinButton">SPIN</Button>
             <p className="formTitle">Place your bets:</p>
             <form>

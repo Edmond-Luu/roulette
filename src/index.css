@@ -7,12 +7,18 @@ body {
 .title { 
   color: white !important;
   font-size: 40px !important;
+  text-align: center;
 }
 
 .wholeApp{
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+}
+
+.leftGrid{
+  display: flex;
+  flex-direction: column;
 }
 
 .formContainer{
@@ -22,17 +28,22 @@ body {
 }
 
 .winningNumber{
-  width: 100px;
-  height: 50px;
-  background-color: white;
+  width: 75px;
+  height: 75px;
   border-radius: 10px;
-  text-align: center;
+  border: 5px solid #ffd700;
   align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
 }
 
 .spinButton{
   margin-top: 10px;
   width: 200px;
+  align-self: center;
 }
 
 .formTitle{

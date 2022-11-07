@@ -10,12 +10,16 @@ import Footer from "./components/Footer"
 function App() {
 
   const [mustSpin, setMustSpin] = React.useState<boolean>(false);
-  const [prizeNumber, setPrizeNumber] = React.useState<number>(0);
+  const [prizeNumber, setPrizeNumber] = React.useState<number>(NaN);
 
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * wheel.length)
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
+  }
+  
+  const winningNumberStyles : {backgroundColor: string;}={
+    backgroundColor: isNaN(prizeNumber) || mustSpin ? "white" : wheel[prizeNumber].style.backgroundColor === "black" ? "black" : wheel[prizeNumber].style.backgroundColor === "red" ? "red" : "green"
   }
 
 
@@ -23,9 +27,14 @@ function App() {
     <div className="app">
 
       <Container>
+        <h1 className="title">React Roulette Game</h1>
         <div className="wholeApp">
-          <div>
-            <h1 className="title">React Roulette Game</h1>
+          <div className="leftGrid">
+
+            <div className="winningNumber" style={winningNumberStyles}>
+              {isNaN(prizeNumber) || mustSpin ? "" : wheel[prizeNumber].option}
+            </div>
+
             <Wheel
               mustStartSpinning={mustSpin}
               prizeNumber={prizeNumber}
