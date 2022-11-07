@@ -22,11 +22,11 @@ function App() {
   const [money, setMoney] = React.useState<number>(100);
 
   const handleSpinClick = () => {
-    if (money >= (betData.colorBet + betData.oddEvenBet) && money !== 0) {
+    if (money >= (Number(betData.colorBet) + Number(betData.oddEvenBet)) && money !== 0 && !mustSpin) {
       const newPrizeNumber = Math.floor(Math.random() * wheel.length)
-      setPrizeNumber(newPrizeNumber)
-      setMustSpin(true)
-      setMoney(old => old - (betData.colorBet + betData.oddEvenBet))
+      setPrizeNumber(newPrizeNumber);
+      setMustSpin(true);
+      setMoney(old => old - (Number(betData.colorBet) + Number(betData.oddEvenBet)));
     }
   }
 
