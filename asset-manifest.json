@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/roulette/static/css/main.34e84568.css",
+    "main.css": "/roulette/static/css/main.517e09df.css",
     "main.js": "/roulette/static/js/main.288f4774.js",
     "index.html": "/roulette/index.html",
-    "main.34e84568.css.map": "/roulette/static/css/main.34e84568.css.map",
+    "main.517e09df.css.map": "/roulette/static/css/main.517e09df.css.map",
     "main.288f4774.js.map": "/roulette/static/js/main.288f4774.js.map"
   },
   "entrypoints": [
-    "static/css/main.34e84568.css",
+    "static/css/main.517e09df.css",
     "static/js/main.288f4774.js"
   ]
 }
