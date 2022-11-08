@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wheel } from 'react-custom-roulette';
 //@ts-ignore
-import { Container } from 'reactbulma';
+import { Container, Button } from 'reactbulma';
 import { wheel } from './wheel';
 
 import Form from "./components/Form";
@@ -64,7 +64,7 @@ function App() {
   return (
     <div className="app">
 
-      <Container>
+      <Container className="container">
         <h1 className="title">React Roulette Game</h1>
         <div className="wholeApp">
           <div className="leftGrid">
@@ -88,18 +88,26 @@ function App() {
                 handlePayout();
               }}
             />
+            <div className="moneyDisplay">
+              Your Money:
+              ${money}
+            </div>
+            <Button danger onClick={handleSpinClick} className="spinButton">SPIN</Button>
+          </div>
+
+
+          <div className="centerGrid">
             <Form
-              spinClick={handleSpinClick}
               handleChange={handleChange}
               betData={betData}
             />
           </div>
 
 
+
           <div className="rightGrid">
-            Your Money:
-            ${money}
           </div>
+
         </div>
       </Container>
       <Footer />

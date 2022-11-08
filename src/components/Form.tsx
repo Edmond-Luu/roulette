@@ -1,12 +1,10 @@
 
 import React from 'react'
 // @ts-ignore
-import { Button } from "reactbulma"
 
 export default function Form(props: any) {
     return (
         <div className="formContainer">
-            <Button danger onClick={props.spinClick} className="spinButton">SPIN</Button>
             <p className="formTitle">Place your bets:</p>
             <form>
                 <div>
