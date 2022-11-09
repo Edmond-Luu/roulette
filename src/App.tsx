@@ -23,7 +23,7 @@ function App() {
 
   const handleSpinClick = () => {
     if (money >= (Number(betData.colorBet) + Number(betData.oddEvenBet)) && money !== 0 && !mustSpin) {
-      const newPrizeNumber = Math.floor(Math.random() * wheel.length)
+      const newPrizeNumber = Math.floor(Math.random() * wheel.length);
       setPrizeNumber(newPrizeNumber);
       setMustSpin(true);
       setMoney(old => old - (Number(betData.colorBet) + Number(betData.oddEvenBet)));
@@ -48,7 +48,7 @@ function App() {
   function handlePayout() {
     // Color Bet Payout
     if (betData.color === wheel[prizeNumber].style.backgroundColor) {
-      setMoney(old => old + betData.colorBet * 2)
+      setMoney(old => betData.color === "green"? old + betData.colorBet * 18 : old + betData.colorBet * 2)
     }
 
     // Odd Even Bet Payout

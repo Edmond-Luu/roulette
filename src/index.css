@@ -52,6 +52,14 @@ body {
   align-self: center;
 }
 
+.betField {
+  background-color: black;
+  border: 5px solid #ffd700;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
 .formTitle {
   color: white;
   padding-top: 25px;
@@ -59,7 +67,12 @@ body {
   font-weight: 700;
 }
 
-.selectLabel {
+.betInput {
+  margin-bottom: 10px;
+}
+
+.selectLabel,
+.betLabel {
   color: white;
   margin-right: 15px;
 }
