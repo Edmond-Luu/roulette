@@ -13,16 +13,17 @@ function App() {
   const [prizeNumber, setPrizeNumber] = React.useState<number>(NaN);
   const [betData, setBetData] = React.useState({
     colorBet: 0,
-    color: "",
+    color: "black",
 
     oddEvenBet: 0,
-    oddEven: ""
+    oddEven: "odd"
+    
   })
   // const [win, setWin] = React.useState<boolean>();
   const [money, setMoney] = React.useState<number>(100);
 
   const handleSpinClick = () => {
-    if (money >= (Number(betData.colorBet) + Number(betData.oddEvenBet)) && money !== 0 && !mustSpin) {
+    if (money >= (Number(betData.colorBet) + Number(betData.oddEvenBet)) && money !== 0 && !mustSpin && !(betData.color === "" && betData.oddEven === "")) {
       const newPrizeNumber = Math.floor(Math.random() * wheel.length);
       setPrizeNumber(newPrizeNumber);
       setMustSpin(true);
@@ -41,14 +42,14 @@ function App() {
         ...oldData,
         [name]: value
       }
-    })
-  }
+    });
+  };
 
 
   function handlePayout() {
     // Color Bet Payout
     if (betData.color === wheel[prizeNumber].style.backgroundColor) {
-      setMoney(old => betData.color === "green"? old + betData.colorBet * 18 : old + betData.colorBet * 2)
+      setMoney(old => betData.color === "green" ? old + betData.colorBet * 18 : old + betData.colorBet * 2)
     }
 
     // Odd Even Bet Payout

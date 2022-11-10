@@ -15,7 +15,6 @@ export default function Form(props: any) {
                     <div>
                         <label htmlFor='selectColor' className="selectLabel">Color</label>
                         <select id="selectColor" className="optionSelect" name="color" onChange={props.handleChange} value={props.betData.color}>
-                            <option value="">No bet</option>
                             <option value="black">⚫ - Pays 1 to 1</option>
                             <option value="red">🔴 - Pays 1 to 1</option>
                             <option value="green">🟢 - Pays 17 to 1</option>
@@ -31,7 +30,6 @@ export default function Form(props: any) {
                     <div>
                         <label htmlFor='selectOddEven' className="selectLabel">Odd or Even - Pays 1 to 1</label>
                         <select id="selectOddEven" className="optionSelect" name="oddEven" onChange={props.handleChange} value={props.betData.oddEven}>
-                            <option value="">No bet</option>
                             <option value="even">Even</option>
                             <option value="odd">Odd</option>
                         </select>
