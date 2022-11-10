@@ -5,7 +5,10 @@ body {
 }
 
 .app {
-  height: 100vh;
+    height: 100vh;
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -88,9 +91,9 @@ body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
+  margin-top: auto;
   display: flex;
+  min-height: 100px;
   background-color: rgb(32, 32, 99) !important;
   width: 100%;
   color: white;
